@@ -6,26 +6,26 @@
 
 <form action="@{Postagens.salvar}">
 
-		<input type="hidden" name="postagem.id" value="${p?.id}" />
+		<input type="hidden" name="p.id" value="${p?.id}" />
 
 	<div class="mb-3">
 		<label class="form-label">titulo:</label>
-		<input type="text" class="form-control" name="postagem.titulo" value="${p?.titulo}" />
+		<input type="text" class="form-control" name="p.titulo" value="${p?.titulo}" />
 	</div>
 	
 	<div class="mb-3">
 		<label class="form-label">conteudo:</label>
-		<input type="text" class="form-control" name="postagem.conteudo" value="${p?.conteudo}" />
+		<input type="text" class="form-control" name="p.conteudo" value="${p?.conteudo}" />
 	</div>
 	
 	<div class="mb-3">
 		<label class="form-label">autor:</label>
-		<input type="text" class="form-control" name="postagem.autor" value="${p?.autor}" />
+		<input type="text" class="form-control" name="p.autor" value="${p?.autor}" />
 	</div>
 	
 	<div class="mb-3">
 		<label class="form-label">data:</label>
-		<input type="date" class="form-control" name="postagem.data" value="${p?.data}" />
+		<input type="date" class="form-control" name="p.data" value="${p?.data}" />
 	</div>
 	
 	<div class="mb-3">
@@ -37,5 +37,4 @@
 	
 	Voltar para a listagem
 </a>
-
 
