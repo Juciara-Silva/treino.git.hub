@@ -1,0 +1,44 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<form action="@{Postagens.listar}">
+	<div class="row">
+		<div class="col-6">
+			<input type="text" class="form-control" name="termo" value="${termo}" />
+		</div>
+		<div class="col-6">
+			<input type="submit" class="btn btn-primary" value="Pesquisar" />
+		</div>
+	</div>
+</form>
+
+
+<p>Pessoas cadastradas</p>
+
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th>titulo</th>
+			<th>conteudo</th>
+			<th>autor</th>
+			<th>data</th>
+		</tr>
+	</thead>
+		#{list items:postagens, as:'p'}
+			<tr>
+				<td>${p.titulo}</td>
+				<td>${p.conteudo}</td>
+				<td>${p.autor}</td>
+				<td>${p.data}</td>
+				
+				<td>
+					<a title="Remover" href="@{Postagens.remover(p.id)}"></a>
+				</td>
+				
+			</tr>
+		#{/list}
+	<tbody>
+	
+	</tbody>
+</table>
+<a  href="@{Postagens.form}">Nova Pessoa</a>
